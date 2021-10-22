@@ -18,7 +18,7 @@ class Cidade {
 
   factory Cidade.fromMap(Map<String, dynamic> map) {
     return Cidade(
-      idUf: map['municipio']['microrregiao']['mesorregiao']['UF']['id'] ?? '',
+      idUf: map['municipio']['microrregiao']['mesorregiao']['UF']['id']?.toString() ?? '',
       nome: map['nome'] ?? '',
     );
   }
